@@ -11,7 +11,7 @@ import pandas as pd
 import streamlit as st
 import streamlit.components.v1 as components
 import time
-import altair as alt
+# import altair as alt
 
 from folium.features import DivIcon
 from geopy.geocoders import Nominatim
@@ -146,6 +146,7 @@ elif add_selectbox == 'Maps':
         ('横手市 (Nakagawa Ward)')
          )
 
+    
     if st.button('Search'):
         
         if map_type == 'Earthquakes':
