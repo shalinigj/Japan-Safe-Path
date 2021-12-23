@@ -34,7 +34,7 @@ add_selectbox = st.sidebar.radio(
     ("Home", "About", "Features", "Safest Path", "Maps", "Visualization", "Conclusion", "Team")
 )
 
- if add_selectbox == 'Home':
+if add_selectbox == 'Home':
     
 #    LOGO_IMAGE = "omdena_japan_logo.jpg"
 
