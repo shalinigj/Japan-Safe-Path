@@ -34,7 +34,16 @@ add_selectbox = st.sidebar.radio(
     ("Home", "About", "Features", "Safest Path", "Maps", "Visualization", "Conclusion", "Team")
 )
 
-if add_selectbox == 'About':
+if add_selectbox == 'Home':
+    
+    st.markdown('href="omdena_japan_logo.jpg"', unsafe_allow_html=True)
+    st.markdown('<h4>Problem Statement</h4>', unsafe_allow_html=True)
+    st.markdown('Natural Disasters are problems in Japan, with risk of earthquakes, floods and tsunamis. Japan has well-developed \
+        disaster response systems, but densely populated cities and narrow roads make managing the response difficult. By giving \
+            individuals information about the safest ways from their homes and places of work, it will increase their awareness of \
+                the surrounding area and improve their preparedness.', unsafe_allow_html=True)
+
+elif add_selectbox == 'About':
     st.subheader('ABOUT THE PROJECT')
 
     st.markdown('<h4>The Background</h4>', unsafe_allow_html=True)
