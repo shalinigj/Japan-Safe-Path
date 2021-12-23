@@ -157,7 +157,7 @@ elif add_selectbox == 'Maps':
 
         ward = ward_type.split(" ")
 
-        details = map_data[map_data['ward'] == ward[0]]
+        details = map_data[map_data['ward']==ward[0]]
 
         coordinates = {
             
