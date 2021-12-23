@@ -196,7 +196,9 @@ elif add_selectbox == 'Visualizations':
     
     
     #image1 = ['one.JPG']
-    st.image("one.jpg", use_column_width=True, caption=["Chocolate"] * len(image))
+    #st.image("one.jpg", use_column_width=True, caption=["Chocolate"]) * len(image))
+    st.image("one.jpg", width=150, caption=["Chocolate"])
+
     #image2 = ['P2100483.JPG']
     #st.image(image2, use_column_width=True, caption=["some generic text"] * len(image2))
     #image3 = ['P2100483.JPG']
