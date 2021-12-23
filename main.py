@@ -11,6 +11,7 @@ import pandas as pd
 import streamlit as st
 import streamlit.components.v1 as components
 import time
+import altair as alt
 
 from folium.features import DivIcon
 from geopy.geocoders import Nominatim
@@ -156,7 +157,7 @@ elif add_selectbox == 'Maps':
 
         ward = ward_type.split(" ")
 
-        details = map_data[map_data['Ward'] == ward[0]]
+        details = map_data[map_data['ward'] == ward[0]]
 
         coordinates = {
             
