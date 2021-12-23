@@ -194,8 +194,9 @@ elif add_selectbox == 'Maps':
         
 elif add_selectbox == 'Visualizations':
     
-    image1 = ['one.JPG']
-    st.image(image1, use_column_width=True, caption=["Chocolate"] * len(image1))
+    
+    #image1 = ['one.JPG']
+    st.image("one.jpg", use_column_width=True, caption=["Chocolate"]) #* len(image1)
     #image2 = ['P2100483.JPG']
     #st.image(image2, use_column_width=True, caption=["some generic text"] * len(image2))
     #image3 = ['P2100483.JPG']
