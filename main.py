@@ -92,8 +92,7 @@ elif add_selectbox == 'Maps':
          )
 
     if st.button('Search'):
-        
-         if map_type == 'Earthquakes':
+        if map_type == 'Earthquakes':
             map_data = pd.read_csv('nakagawa_earthquake_shelters.csv')
         elif map_type == 'Tsunamis':
             map_data = pd.read_csv('nakagawa_tsunami_shelters.csv')
