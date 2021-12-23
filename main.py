@@ -195,13 +195,13 @@ elif add_selectbox == 'Maps':
 elif add_selectbox == 'Visualizations':
     
     image1 = ['P2100483.JPG']
-    st.image(image1, use_column_width=True, caption=["some generic text"] * len(images))
+    st.image(image1, use_column_width=True, caption=["some generic text"] * len(image1))
     image2 = ['P2100483.JPG']
-    st.image(image2, use_column_width=True, caption=["some generic text"] * len(images))
+    st.image(image2, use_column_width=True, caption=["some generic text"] * len(image2))
     image3 = ['P2100483.JPG']
-    st.image(image3, use_column_width=True, caption=["some generic text"] * len(images))
+    st.image(image3, use_column_width=True, caption=["some generic text"] * len(image3))
     image4 = ['P2100483.JPG']
-    st.image(image4, use_column_width=True, caption=["some generic text"] * len(images))
+    st.image(image4, use_column_width=True, caption=["some generic text"] * len(image4))
 
     st.subheader('ABOUT THE PROJECT')
 
