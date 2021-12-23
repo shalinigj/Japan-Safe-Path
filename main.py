@@ -106,9 +106,9 @@ elif add_selectbox == 'Features':
 
     st.subheader('PROJECT ENDORSEMENTS')
 
-    st.markdown('Safest route path to take at occurences of japan disasters', unsafe_allow_html=True)
-    st.markdown('Locates Shelters in Nakagawa Ward - Earthquakes, Tsunamis and Floods', unsafe_allow_html=True)
-    st.markdown('Visualizations to Check and Differentiate Parameters across the Nakagawa Ward', unsafe_allow_html=True)
+    st.markdown('• Safest route path to take at occurences of japan disasters', unsafe_allow_html=True)
+    st.markdown('• Locates Shelters in Nakagawa Ward - Earthquakes, Tsunamis and Floods', unsafe_allow_html=True)
+    st.markdown('• Visualizations to Check and Differentiate Parameters across the Nakagawa Ward', unsafe_allow_html=True)
     
 elif add_selectbox == 'Safest Path':
     st.subheader('Find Safest Path')
