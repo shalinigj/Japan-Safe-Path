@@ -34,39 +34,39 @@ add_selectbox = st.sidebar.radio(
     ("Home", "About", "Features", "Safest Path", "Maps", "Visualization", "Conclusion", "Team")
 )
 
-if add_selectbox == 'Home':
+ if add_selectbox == 'Home':
     
-    LOGO_IMAGE = "omdena_japan_logo.jpg"
+#    LOGO_IMAGE = "omdena_japan_logo.jpg"
 
-st.markdown(
-    """
-    <style>
-    .container {
-        display: flex;
-    }
-    .logo-text {
-        font-weight:700 !important;
-        font-size:50px !important;
-        color: #f9a01b !important;
-        padding-top: 75px !important;
-    }
-    .logo-img {
-        float:left;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+#st.markdown(
+#    """
+#    <style>
+#    .container {
+#       display: flex;
+#    }
+#    .logo-text {
+#        font-weight:700 !important;
+#        font-size:50px !important;
+#        color: #f9a01b !important;
+#        padding-top: 75px !important;
+#    }
+#    .logo-img {
+#       float:left;
+#   }
+#   </style>
+#    """,
+#    unsafe_allow_html=True
+#)
 
-st.markdown(
-    f"""
-    <div class="container">
-        <img class="logo-img" src="data:image/png;base64,{base64.b64encode(open(LOGO_IMAGE, "rb").read()).decode()}">
-        <p class="logo-text">Logo</p>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+#st.markdown(
+#   f"""
+#    <div class="container">
+#        <img class="logo-img" src="data:image/png;base64,{base64.b64encode(open(LOGO_IMAGE, "rb").read()).decode()}">
+#        <p class="logo-text">Logo</p>
+#    </div>
+#    """,
+#    unsafe_allow_html=True
+#) 
 
     
   #  st.markdown('<h1 style="float: left;">Omdena Japan Chapter</h1><img style="float: left;" src="omdena_japan_logo.jpg" />', unsafe_allow_html=True)
@@ -94,7 +94,15 @@ elif add_selectbox == 'About':
         response plans, depending on their circumstances. To be used by individuals, families and groups, and foreign residents who may \
             not understand local information. Further development will be covering more geographical areas and publicising on a local level.'
                 , unsafe_allow_html=True)
+    
+    
+elif add_selectbox == 'Features':
 
+    st.markdown('<h4>Features</h4>', unsafe_allow_html=True)
+    st.markdown('Point 1', unsafe_allow_html=True)
+    st.markdown('Point 2', unsafe_allow_html=True)
+    st.markdown('Point 3', unsafe_allow_html=True)
+    
 elif add_selectbox == 'Safest Path':
     st.subheader('Find Safest Path')
 
@@ -103,22 +111,22 @@ elif add_selectbox == 'Safest Path':
     # G_walk = ox.graph_from_place('Manhattan Island, New York City, New York, USA',
     #                          network_type='walk')
 
-    G_walk = joblib.load('G_walk.sav')
+   # G_walk = joblib.load('G_walk.sav')
 
-    orig_node = ox.get_nearest_node(G_walk,
-                                    (40.748441, -73.985664))
+   # orig_node = ox.get_nearest_node(G_walk,
+   #                                (40.748441, -73.985664))
 
-    dest_node = ox.get_nearest_node(G_walk,
-                                    (40.748441, -73.4))
+   # dest_node = ox.get_nearest_node(G_walk,
+   #                                (40.748441, -73.4))
 
-    route = nx.shortest_path(G_walk,
-                             orig_node,
-                             dest_node,
-                             weight='length')
+   # route = nx.shortest_path(G_walk,
+   #                         orig_node,
+   #                          dest_node,
+   #                          weight='length')
 
-    route_map = ox.plot_route_folium(G_walk, route)
+   # route_map = ox.plot_route_folium(G_walk, route)
 
-    folium_static(route_map, width=900)
+   # folium_static(route_map, width=900)
 
 elif add_selectbox == 'Maps':
     st.subheader('Maps')
