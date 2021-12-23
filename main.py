@@ -38,36 +38,36 @@ add_selectbox = st.sidebar.radio(
 
 if add_selectbox == 'Home':
     
-LOGO_IMAGE = "omdena_japan_logo.jpg"
+    LOGO_IMAGE = "omdena_japan_logo.jpg"
+    
+    st.markdown(
+          """
+          <style>
+          .container {
+          display: flex;
+        }
+        .logo-text {
+             font-weight:700 !important;
+             font-size:50px !important;
+             color: #f9a01b !important;
+             padding-top: 75px !important;
+        }
+        .logo-img {
+             float:right;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
 
-st.markdown(
-    """
-    <style>
-    .container {
-        display: flex;
-    }
-    .logo-text {
-        font-weight:700 !important;
-        font-size:50px !important;
-        color: #f9a01b !important;
-        padding-top: 75px !important;
-    }
-    .logo-img {
-        float:right;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
-st.markdown(
-    f"""
-    <div class="container">
-        <img class="logo-img" src="data:image/jpg;base64,{base64.b64encode(open(LOGO_IMAGE, "rb").read()).decode()}">
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+    st.markdown(
+          f"""
+          <div class="container">
+               <img class="logo-img" src="data:image/jpg;base64,{base64.b64encode(open(LOGO_IMAGE, "rb").read()).decode()}">
+          </div>
+          """,
+          unsafe_allow_html=True
+    )
 
     
     st.markdown('<h1 style="float: left;">Omdena Japan Chapter</h1><img style="float: left;" img src="omdena_japan_logo.jpg" />', unsafe_allow_html=True)
