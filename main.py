@@ -26,7 +26,7 @@ st.set_page_config(
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
-st.sidebar.markdown('<h1 style="margin-left:8%; color:#1a5276">Nakagawa Dashboard for Safest Path during Earthquakes </h1>',
+st.sidebar.markdown('<h1 style="margin-left:8%; color:#1a5276">Nakagawa Dashboard for Safest Path </h1>',
                     unsafe_allow_html=True)
 
 add_selectbox = st.sidebar.radio(
@@ -92,16 +92,20 @@ elif add_selectbox == 'Maps':
          )
 
     if st.button('Search'):
-
-        if map_type == 'Shelters':
-            map_data = pd.read_csv('nakagawa_shelters.csv')
+        
+         if map_type == 'Earthquakes':
+            map_data = pd.read_csv('nakagawa_earthquake_shelters.csv')
+        elif map_type == 'Tsunamis':
+            map_data = pd.read_csv('nakagawa_tsunami_shelters.csv')
+        else map_type == 'Floods':
+            map_data = pd.read_csv('nakagawa_flood_shelters.csv')
 
         ward = ward_type.split(" ")
 
         details = map_data[map_data['Ward'] == ward[0]]
 
         coordinates = {
-            '横手市 (Nakagawa Ward)': [39.3138, 140.5666]
+            '中川区 (Nakagawa Ward)': [35.139288, 136.8128218]
         }
 
         m = folium.Map(location=coordinates[ward_type], zoom_start=10)
@@ -141,4 +145,5 @@ elif add_selectbox == 'Team':
 
     st.subheader('Project Manager')
 
-    st.markdown('<a href="https://www.linkedin.com/in/galina-naydenova-msc-fhea-b89856196/">Galina Naydenova</a>', u
+    st.markdown('<a href="https://www.linkedin.com/in/galina-naydenova-msc-fhea-b89856196/">Galina Naydenova</a>', unsafe_allow_html=True)
+                
