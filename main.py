@@ -68,11 +68,6 @@ if add_selectbox == 'Home':
           """,
           unsafe_allow_html=True
     )
-
-    
-    st.markdown('<h1 style="float: left;">Omdena Japan Chapter</h1><img style="float: left;" img src="omdena_japan_logo.jpg" />', unsafe_allow_html=True)
-
-#<img src=”(your image URL here)”>
     
     st.markdown('<h4>Problem Statement</h4>', unsafe_allow_html=True)
     
@@ -85,24 +80,26 @@ elif add_selectbox == 'About':
     
     st.subheader('ABOUT THE PROJECT')
 
-    st.markdown('<h4>The Background</h4>', unsafe_allow_html=True)
-    st.markdown('Natural Disasters are problems in Japan, with risk of earthquakes, floods and tsunamis. Japan has well-developed \
-        disaster response systems, but densely populated cities and narrow roads make managing the response difficult. By giving \
-            individuals information about the safest ways from their homes and places of work, it will increase their awareness of \
-                the surrounding area and improve their preparedness.', unsafe_allow_html=True)
-    st.markdown('<h4>The Problem</h4>', unsafe_allow_html=True)
-    st.markdown('Design a model collecting data about the local roads from satellite images, classify them and indicate the safest \
-        route to be taken from point A to point B. Design an interactive dashboard to display the safest route in a map.',
+    st.markdown('<h4>Project Goals</h4>', unsafe_allow_html=True)
+    st.markdown('– collect satellite images and identify road characteristics', unsafe_allow_html=True) 
+    st.markdown('– build a model for scoring the roads in terms of their suitability for use in emergency', unsafe_allow_html=True) 
+    st.markdown('– build a pathfinding model from A to B, combining it with road characteristics', unsafe_allow_html=True) 
+    st.markdown('– suggest safest path from A to B', unsafe_allow_html=True) 
+    st.markdown('– publish interactive dashboards to display road characteristics and safest paths', unsafe_allow_html=True) 
+    st.markdown('– arrange demonstration and publicise to local audiences', unsafe_allow_html=True) 
+    
+    st.markdown('<h4>Developments Made</h4>', unsafe_allow_html=True)
+    st.markdown('We had designed a model collecting data about the local roads from satellite images, classify them and indicate the safest \
+        route to be taken from point A to point B and an interactive dashboard to display the safest route in a map.',
                 unsafe_allow_html=True)
     st.markdown('By making individuals aware, it will improve their preparedness and it can be used within families to prepare disaster \
         response plans, depending on their circumstances. To be used by individuals, families and groups, and foreign residents who may \
             not understand local information. Further development will be covering more geographical areas and publicising on a local level.'
                 , unsafe_allow_html=True)
     
-    
 elif add_selectbox == 'Features':
 
-    st.markdown('<h4>Features</h4>', unsafe_allow_html=True)
+    st.markdown('<h4>Project Endorsements</h4>', unsafe_allow_html=True)
     st.markdown('Point 1', unsafe_allow_html=True)
     st.markdown('Point 2', unsafe_allow_html=True)
     st.markdown('Point 3', unsafe_allow_html=True)
