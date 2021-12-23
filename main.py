@@ -26,7 +26,7 @@ st.set_page_config(
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
-st.sidebar.markdown('<h1 style="margin-left:8%; color:#1a5276">Nakagawa Dashboard for Safest Path </h1>',
+st.sidebar.markdown('<h1 style="margin-left:8%; color:#D19487 ">Nakagawa Dashboard for Safest Path </h1>',
                     unsafe_allow_html=True)
 
 add_selectbox = st.sidebar.radio(
@@ -69,7 +69,9 @@ if add_selectbox == 'Home':
 #) 
 
     
-  #  st.markdown('<h1 style="float: left;">Omdena Japan Chapter</h1><img style="float: left;" src="omdena_japan_logo.jpg" />', unsafe_allow_html=True)
+st.markdown('<h1 style="float: left;">Omdena Japan Chapter</h1><img style="float: left;" img src="omdena_japan_logo.jpg" />', unsafe_allow_html=True)
+
+#<img src=”(your image URL here)”>
     
     st.markdown('<h4>Problem Statement</h4>', unsafe_allow_html=True)
     
