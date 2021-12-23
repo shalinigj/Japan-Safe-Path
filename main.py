@@ -146,6 +146,7 @@ elif add_selectbox == 'Maps':
          )
 
     if st.button('Search'):
+        
         if map_type == 'Earthquakes':
             map_data = pd.read_csv('nakagawa_earthquake_shelters.csv')
         elif map_type == 'Tsunamis':
@@ -158,7 +159,10 @@ elif add_selectbox == 'Maps':
         details = map_data[map_data['Ward'] == ward[0]]
 
         coordinates = {
-            '中川区 (Nakagawa Ward)': [35.139288, 136.8128218]
+            
+            '中川区 (Nakagawa Ward)': [35.1332, 136.8350]
+
+            #'中川区 (Nakagawa Ward)': [35.139288, 136.8128218]
         }
 
         m = folium.Map(location=coordinates[ward_type], zoom_start=10)
