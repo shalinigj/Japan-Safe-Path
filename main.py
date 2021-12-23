@@ -13,6 +13,7 @@ import streamlit.components.v1 as components
 import time
 import altair as alt
 import base64
+from itertools import cycle
 
 from folium.features import DivIcon
 from geopy.geocoders import Nominatim
@@ -197,10 +198,15 @@ elif add_selectbox == 'Visualizations':
     
     #image1 = ['one.JPG']
     #st.image("one.jpg", use_column_width=True, caption=["Chocolate"]) * len(image))
-    st.image("one.jpg", width=400, caption=["Chocolate"])
-    st.image("one.jpg", width=400, caption=["Chocolate"])
+    #st.image("one.jpg", width=400, caption=["Chocolate"])
+    #st.image("one.jpg", width=400, caption=["Chocolate"])
 
-
+    filteredImages = ['one.JPG', 'one.JPG', 'one.JPG', 'one.JPG'] # your images here
+    caption = ['i want one', 'I want two', 'I want three', 'I want four'] # your caption here
+    cols = cycle(st.columns(2)) # st.columns here since it is out of beta at the time I'm writing this
+    for idx, filteredImage in enumerate(filteredImages):
+        next(cols).image(filteredImage, width=400, caption=caption[idx])
+        
     #image2 = ['P2100483.JPG']
     #st.image(image2, use_column_width=True, caption=["some generic text"] * len(image2))
     #image3 = ['P2100483.JPG']
