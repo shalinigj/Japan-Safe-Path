@@ -153,8 +153,8 @@ elif add_selectbox == 'Maps':
             map_data = pd.read_csv('nakagawa_earthquake_shelters.csv')
         elif map_type == 'Tsunamis':
             map_data = pd.read_csv('nakagawa_tsunami_shelters.csv')
-        elif map_type == 'Floods':
-            map_data = pd.read_csv('nakagawa_flood_shelters.csv')
+        #elif map_type == 'Floods':
+        #    map_data = pd.read_csv('nakagawa_flood_shelters.csv')
 
         ward = ward_type.split(" ")
 
