@@ -143,8 +143,9 @@ elif add_selectbox == 'Maps':
 
     ward_type = col2.selectbox(
         "Ward",
-        ('横手市 (Nakagawa Ward)')
-         )
+        ( '横手市 (Nakagawa Ward)', '横手市 (Midori Ward)'
+        )
+   )
 
     
     if st.button('Search'):
@@ -153,8 +154,8 @@ elif add_selectbox == 'Maps':
             map_data = pd.read_csv('nakagawa_earthquake_shelters.csv')
         elif map_type == 'Tsunamis':
             map_data = pd.read_csv('nakagawa_tsunami_shelters.csv')
-        #elif map_type == 'Floods':
-        #    map_data = pd.read_csv('nakagawa_flood_shelters.csv')
+        elif map_type == 'Floods':
+            map_data = pd.read_csv('nakagawa_flood_shelters.csv')
 
         ward = ward_type.split(" ")
 
@@ -162,7 +163,9 @@ elif add_selectbox == 'Maps':
 
         coordinates = {
             
-            '中川区 (Nakagawa Ward)': [35.1332, 136.8350]
+            #'中川区 (Nakagawa Ward)': [35.1332, 136.8350],
+            '中川区 (Nakagawa Ward)': [35.1392027, 136.7778013],
+            '緑区 (Midori Ward)': [35.0852, 136.9708]
 
             #'中川区 (Nakagawa Ward)': [35.139288, 136.8128218]
         }
