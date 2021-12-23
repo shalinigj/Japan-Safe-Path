@@ -69,7 +69,7 @@ if add_selectbox == 'Home':
 #) 
 
     
-st.markdown('<h1 style="float: left;">Omdena Japan Chapter</h1><img style="float: left;" img src="omdena_japan_logo.jpg" />', unsafe_allow_html=True)
+    st.markdown('<h1 style="float: left;">Omdena Japan Chapter</h1><img style="float: left;" img src="omdena_japan_logo.jpg" />', unsafe_allow_html=True)
 
 #<img src=”(your image URL here)”>
     
