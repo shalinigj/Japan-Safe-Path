@@ -36,7 +36,40 @@ add_selectbox = st.sidebar.radio(
 
 if add_selectbox == 'Home':
     
-    st.markdown('<h1 style="float: left;">Omdena Japan Chapter</h1><img style="float: left;" src="omdena_japan_logo.jpg" />', unsafe_allow_html=True)
+    LOGO_IMAGE = "omdena_japan_logo.jpg"
+
+st.markdown(
+    """
+    <style>
+    .container {
+        display: flex;
+    }
+    .logo-text {
+        font-weight:700 !important;
+        font-size:50px !important;
+        color: #f9a01b !important;
+        padding-top: 75px !important;
+    }
+    .logo-img {
+        float:left;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+st.markdown(
+    f"""
+    <div class="container">
+        <img class="logo-img" src="data:image/png;base64,{base64.b64encode(open(LOGO_IMAGE, "rb").read()).decode()}">
+        <p class="logo-text">Logo</p>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+    
+  #  st.markdown('<h1 style="float: left;">Omdena Japan Chapter</h1><img style="float: left;" src="omdena_japan_logo.jpg" />', unsafe_allow_html=True)
     
     st.markdown('<h4>Problem Statement</h4>', unsafe_allow_html=True)
     st.markdown('Natural Disasters are problems in Japan, with risk of earthquakes, floods and tsunamis. Japan has well-developed \
