@@ -172,7 +172,7 @@ elif add_selectbox == 'Maps':
             '緑区 (Midori Ward)': [35.0852, 136.9708]
         }
 
-        m = folium.Map(location=coordinates[city_type], zoom_start=10)
+        m = folium.Map(location=coordinates[ward_type], zoom_start=10)
         for index, row in details.iterrows():
             if row['geometry'].startswith("POINT"):
                 geometry = shapely.wkt.loads(row['geometry'])
