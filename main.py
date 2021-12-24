@@ -198,10 +198,15 @@ elif add_selectbox == 'Visualizations':
     
     #image1 = ['one.JPG']
     #st.image("one.jpg", use_column_width=True, caption=["Chocolate"]) * len(image))
-    st.markdown('<h4>Picture 1</h4>', unsafe_allow_html=True)
-    st.image("one.jpg", width=400)
-    st.markdown('<h4>Picture 2</h4>', unsafe_allow_html=True)
-    st.image("one.jpg", width=400)
+    st.markdown('<h4>Japan Earthquake Zoning Areas</h4>', unsafe_allow_html=True)
+    st.image("Japan_Earthquakes_Zoning.png", width=400)
+    st.markdown('<h4>Nakagawa Shelter Maps</h4>', unsafe_allow_html=True)
+    st.image("Nakagawa_Shelter_Maps.png", width=400)
+    st.markdown('<h4>Nakagawa Building Density Score</h4>', unsafe_allow_html=True)
+    st.image("Nakagawa_Building_Density_Score.png", width=400)
+    st.markdown('<h4>Nakagawa Building Distance Risk Score</h4>', unsafe_allow_html=True)
+    st.image("Nakagawa_Building_Distance_Risk_Score.png", width=400)
+   
     #st.image("one.jpg", width=400, caption=["Chocolate"])
 
     #filteredImages = ['one.JPG', 'one.JPG', 'one.JPG', 'one.JPG'] # your images here
