@@ -144,6 +144,57 @@ elif add_selectbox == 'Maps':
     map_type = col1.selectbox(
         "Shelters",
         ('横手市 (Earthquakes)', '湯沢市 (Tsunamis)', '湯沢市 (Floods)')
+    )
+
+    city_type = col2.selectbox(
+        "City",
+        ( '横手市 (Yokote City)', '湯沢市 (Yuzawa City)'
+        )
+    )
+
+    if st.button('Search'):
+
+        if map_type == 'Earthquakes':
+            map_data = pd.read_csv('nakagawa_earthquake_shelters.csv')
+        elif map_type == 'Tsunamis':
+            map_data = pd.read_csv('nakagawa_tsunami_shelters.csv')
+        elif map_type == 'Floods':
+            map_data = pd.read_csv('nakagawa_flood_shelters.csv')
+
+        city = city_type.split(" ")
+
+        details = map_data[map_data['city']==city[0]]
+
+        coordinates = {
+            '横手市 (Yokote City)': [39.3138, 140.5666],
+            '湯沢市 (Yuzawa City)': [39.1644, 140.4957]
+        }
+
+        m = folium.Map(location=coordinates[city_type], zoom_start=10)
+        for index, row in details.iterrows():
+            if row['geometry'].startswith("POINT"):
+                geometry = shapely.wkt.loads(row['geometry'])
+            else:
+                p = shapely.wkt.loads(row['geometry'])
+                geometry = p.centroid
+
+            folium.Marker(
+                [geometry.y, geometry.x], popup=row['display_name'],
+            ).add_to(m)
+
+        # london_location = [35.183334,136.899994]
+
+        # m = folium.Map(location=london_location, zoom_start=15)
+        folium_static(m, width=900)
+        
+elif add_selectbox == 'Maps':
+    st.subheader('Maps')
+
+    col1, col2 = st.columns(2)
+
+    map_type = col1.selectbox(
+        "Shelters",
+        ('横手市 (Earthquakes)', '湯沢市 (Tsunamis)', '湯沢市 (Floods)')
          )
 
     ward_type = col2.selectbox(
