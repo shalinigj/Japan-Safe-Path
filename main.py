@@ -222,30 +222,6 @@ elif add_selectbox == 'Visualizations':
     #image4 = ['P2100483.JPG']
     #st.image(image4, use_column_width=True, caption=["some generic text"] * len(image4))
 
-    st.subheader('ABOUT THE PROJECT')
-
-    st.markdown('<h4>Project Goals</h4>', unsafe_allow_html=True)
-    st.markdown('• collect satellite images and identify road characteristics', unsafe_allow_html=True) 
-    st.markdown('• build a model for scoring the roads in terms of their suitability for use in emergency', unsafe_allow_html=True) 
-    st.markdown('• build a pathfinding model from A to B, combining it with road characteristics', unsafe_allow_html=True) 
-    st.markdown('• suggest safest path from A to B', unsafe_allow_html=True) 
-    st.markdown('• publish interactive dashboards to display road characteristics and safest paths', unsafe_allow_html=True) 
-    st.markdown('• arrange demonstration and publicise to local audiences', unsafe_allow_html=True) 
-    
-    st.markdown('<h4>Location Choosen</h4>', unsafe_allow_html=True)
-    st.markdown('We had choosen "Nakagawa-Ku as our region of interest, which comes under Aichi prefecture of Nagoya City. It comes under Chubu region and \
-        is the 4th densely populated city in Japan with high risk prone to disasters.',
-                unsafe_allow_html=True)
-    
-    st.markdown('<h4>Developments Made</h4>', unsafe_allow_html=True)
-    st.markdown('We had designed a model collecting data about the local roads from satellite images, classify them and indicate the safest \
-        route to be taken from point A to point B and an interactive dashboard to display the safest route in a map.',
-                unsafe_allow_html=True)
-    st.markdown('By making individuals aware, it will improve their preparedness and it can be used within families to prepare disaster \
-        response plans, depending on their circumstances. To be used by individuals, families and groups, and foreign residents who may \
-            not understand local information. Further development will be covering more geographical areas and publicising on a local level.'
-                , unsafe_allow_html=True)
-    
     
 elif add_selectbox == 'Conclusion':
     
