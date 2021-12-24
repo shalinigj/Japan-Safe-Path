@@ -151,7 +151,6 @@ elif add_selectbox == 'Maps':
         ( '横手市 (Nakagawa Ward)', '横手市 (Midori Ward)'
         )
     )
-    print(map_type)
     
     if st.button('Search'):
 
