@@ -204,11 +204,11 @@ elif add_selectbox == 'Visualizations':
     st.image("one.jpg", width=400)
     #st.image("one.jpg", width=400, caption=["Chocolate"])
 
-    filteredImages = ['one.JPG', 'one.JPG', 'one.JPG', 'one.JPG'] # your images here
-    caption = ['i want one', 'I want two', 'I want three', 'I want four'] # your caption here
-    cols = cycle(st.columns(2)) # st.columns here since it is out of beta at the time I'm writing this
-    for idx, filteredImage in enumerate(filteredImages):
-        next(cols).image(filteredImage, width=400, caption=caption[idx])
+    #filteredImages = ['one.JPG', 'one.JPG', 'one.JPG', 'one.JPG'] # your images here
+    #caption = ['i want one', 'I want two', 'I want three', 'I want four'] # your caption here
+    #cols = cycle(st.columns(2)) # st.columns here since it is out of beta at the time I'm writing this
+    #for idx, filteredImage in enumerate(filteredImages):
+    #    next(cols).image(filteredImage, width=400, caption=caption[idx])
         
     #image2 = ['P2100483.JPG']
     #st.image(image2, use_column_width=True, caption=["some generic text"] * len(image2))
