@@ -156,13 +156,12 @@ elif add_selectbox == 'Maps':
       
     
     if st.button('Search'):
-        st.write(map_type)
-            
-        if map_type == 'Earthquakes':
+                   
+        if map_type == '横手市 (Earthquakes)':
             map_data = pd.read_csv('nakagawa_earthquake_shelters.csv')
-        elif map_type == 'Tsunamis':
+        elif map_type == '湯沢市 (Tsunamis)':
             map_data = pd.read_csv('nakagawa_tsunami_shelters.csv')
-        elif map_type == 'Floods':
+        elif map_type == '湯沢市 (Floods)':
             map_data = pd.read_csv('nakagawa_flood_shelters.csv')
 
         ward = ward_type.split(" ")
