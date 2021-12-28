@@ -159,38 +159,38 @@ elif add_selectbox == 'Maps':
                    
         if map_type == '横手市 (Earthquakes)':
             map_data = pd.read_csv('nakagawa_earthquake_shelters.csv')
+            st.write(map_type)
         elif map_type == '湯沢市 (Tsunamis)':
             map_data = pd.read_csv('nakagawa_tsunami_shelters.csv')
         elif map_type == '湯沢市 (Floods)':
             map_data = pd.read_csv('nakagawa_flood_shelters.csv')
 
-        ward = ward_type.split(" ")
+        #ward = ward_type.split(" ")
 
-        details = map_data[map_data['ward']==ward[0]]
+        #details = map_data[map_data['ward']==ward[0]]
 
-        coordinates = {
-            #'中川区 (Nakagawa Ward)': [35.1332, 136.8350],
-            #'中川区 (Nakagawa Ward)': [35.139288, 136.8128218]
-            '中川区 (Nakagawa Ward)': [35.1392027, 136.7778013],
-            '緑区 (Midori Ward)': [35.0852, 136.9708]
-        }
+       # coordinates = {
+        
+           # '中川区 (Nakagawa Ward)': [35.1392027, 136.7778013],
+           # '緑区 (Midori Ward)': [35.0852, 136.9708]
+       # }
 
-        m = folium.Map(location=coordinates[ward_type], zoom_start=10)
-        for index, row in details.iterrows():
-            if row['geometry'].startswith("POINT"):
-                geometry = shapely.wkt.loads(row['geometry'])
-            else:
-                p = shapely.wkt.loads(row['geometry'])
-                geometry = p.centroid
+        #m = folium.Map(location=coordinates[ward_type], zoom_start=10)
+      #  for index, row in details.iterrows():
+          #  if row['geometry'].startswith("POINT"):
+          #      geometry = shapely.wkt.loads(row['geometry'])
+          #  else:
+           #     p = shapely.wkt.loads(row['geometry'])
+           #     geometry = p.centroid
 
-            folium.Marker(
-                [geometry.y, geometry.x], popup=row['display_name'],
-            ).add_to(m)
+          #  folium.Marker(
+          #      [geometry.y, geometry.x], popup=row['display_name'],
+        #    ).add_to(m)
 
         # london_location = [35.183334,136.899994]
 
         # m = folium.Map(location=london_location, zoom_start=15)
-        folium_static(m, width=900)
+       # folium_static(m, width=900)
         
         
 elif add_selectbox == 'Visualizations':
