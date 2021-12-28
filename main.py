@@ -159,6 +159,7 @@ elif add_selectbox == 'Maps':
                    
         if map_type == '横手市 (Earthquakes)':
             map_data = pd.read_csv('nakagawa_earthquake_shelters.csv')
+            map_data.head(10)
        # elif map_type == '湯沢市 (Tsunamis)':
            # map_data = pd.read_csv('nakagawa_tsunami_shelters.csv')
        # elif map_type == '湯沢市 (Floods)':
