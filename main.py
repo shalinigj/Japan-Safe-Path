@@ -167,8 +167,10 @@ elif add_selectbox == 'Maps':
             
     
         ward = ward_type.split(" ")
+        ward_n = ward[1]
+        st.write(ward_n)
         ward_split =ward[1].split("(")
-        st.write(ward_split)
+        
         #details = map_data[map_data['ward']==ward[1]]
       
        # coordinates = {
