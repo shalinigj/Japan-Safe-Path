@@ -168,7 +168,7 @@ elif add_selectbox == 'Maps':
         st.write(map_data['ward'])
         
         st.write(ward[1])
-        details = map_data[map_data['ward']==ward[1]]
+        #details = map_data[map_data['ward']==ward[1]]
       
        # coordinates = {
         
