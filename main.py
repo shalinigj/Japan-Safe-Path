@@ -159,15 +159,15 @@ elif add_selectbox == 'Maps':
                    
         if map_type == '横手市 (Earthquakes)':
             map_data = pd.read_csv('nakagawa_earthquake_shelters.csv')
-        elif map_type == '湯沢市 (Tsunamis)':
-            map_data = pd.read_csv('nakagawa_tsunami_shelters.csv')
-        elif map_type == '湯沢市 (Floods)':
-            map_data = pd.read_csv('nakagawa_flood_shelters.csv')
+       # elif map_type == '湯沢市 (Tsunamis)':
+           # map_data = pd.read_csv('nakagawa_tsunami_shelters.csv')
+       # elif map_type == '湯沢市 (Floods)':
+           # map_data = pd.read_csv('nakagawa_flood_shelters.csv')
 
-        ward = ward_type.split(" ")
-        st.write(map_data['ward'])
+        #ward = ward_type.split(" ")
+        #st.write(map_data['ward'])
         
-        st.write(ward[1])
+       # st.write(ward[1])
         #details = map_data[map_data['ward']==ward[1]]
       
        # coordinates = {
