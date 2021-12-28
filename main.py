@@ -144,14 +144,16 @@ elif add_selectbox == 'Maps':
     map_type = col1.selectbox(
         "Shelters",
         ('横手市 (Earthquakes)', '湯沢市 (Tsunamis)', '湯沢市 (Floods)')
+         print(map_type) 
     )
-      print(map_type) 
+     
     ward_type = col2.selectbox(
         "Ward",
         ( '横手市 (Nakagawa Ward)', '横手市 (Midori Ward)'
         )
+        print(ward_type)
     )
-      print(ward_type) 
+      
     
     if st.button('Search'):
         print(map_type) 
