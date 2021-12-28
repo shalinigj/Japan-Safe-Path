@@ -168,14 +168,13 @@ elif add_selectbox == 'Maps':
         ward = ward_type.split(" ")
         ward_n = ward[1]
         ward_split = str(ward_n).replace("("," ")
-        st.write(ward_split)
-        #details = map_data[map_data['ward']==ward[1]]
+        details = map_data[map_data['ward']==ward_split]
       
-       # coordinates = {
+        coordinates = {
         
-           # '中川区 (Nakagawa Ward)': [35.1392027, 136.7778013],
-           # '緑区 (Midori Ward)': [35.0852, 136.9708]
-       # }
+           '中川区 (Nakagawa Ward)': [35.1392027, 136.7778013],
+            '緑区 (Midori Ward)': [35.0852, 136.9708]
+        }
 
         #m = folium.Map(location=coordinates[ward_type], zoom_start=10)
       #  for index, row in details.iterrows():
