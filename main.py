@@ -165,10 +165,10 @@ elif add_selectbox == 'Maps':
             map_data = pd.read_csv('nakagawa_flood_shelters.csv')
     
     
-        ward = ward_type
-        st.write(ward)
+        #ward = ward_type
+        st.write(ward_type)
         #ward_split = str(ward[1]).replace("("," ")
-        #details = map_data[map_data['ward']==ward_split]
+        details = map_data[map_data['ward']==ward_type]
       
         #coordinates = {
         
