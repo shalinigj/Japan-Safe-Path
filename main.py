@@ -168,30 +168,32 @@ elif add_selectbox == 'Maps':
         #ward = ward_type
         st.write(ward_type)
         #ward_split = str(ward[1]).replace("("," ")
+       
+        
         details = map_data[map_data['ward']==ward_type]
       
-        #coordinates = {
+        coordinates = {
         
-         #  '中川区 (Nakagawa Ward)': [35.1392027, 136.7778013],
-         #   '緑区 (Midori Ward)': [35.0852, 136.9708]
-        #}
+          '中川区 (Nakagawa Ward)': [35.1392027, 136.7778013],
+            '緑区 (Midori Ward)': [35.0852, 136.9708]
+        }
 
-        #m = folium.Map(location=coordinates[ward_type], zoom_start=10)
-      #  for index, row in details.iterrows():
-          #  if row['geometry'].startswith("POINT"):
-          #      geometry = shapely.wkt.loads(row['geometry'])
-          #  else:
-           #     p = shapely.wkt.loads(row['geometry'])
-           #     geometry = p.centroid
+        m = folium.Map(location=coordinates[ward_type], zoom_start=10)
+       for index, row in details.iterrows():
+          if row['geometry'].startswith("POINT"):
+               geometry = shapely.wkt.loads(row['geometry'])
+            else:
+                p = shapely.wkt.loads(row['geometry'])
+                geometry = p.centroid
 
-          #  folium.Marker(
-          #      [geometry.y, geometry.x], popup=row['display_name'],
-        #    ).add_to(m)
+            folium.Marker(
+               [geometry.y, geometry.x], popup=row['display_name'],
+           ).add_to(m)
 
-        # london_location = [35.183334,136.899994]
+         london_location = [35.183334,136.899994]
 
-        # m = folium.Map(location=london_location, zoom_start=15)
-       # folium_static(m, width=900)
+        m = folium.Map(location=london_location, zoom_start=15)
+       folium_static(m, width=900)
         
         
 elif add_selectbox == 'Visualizations':
