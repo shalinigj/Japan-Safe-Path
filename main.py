@@ -174,8 +174,8 @@ elif add_selectbox == 'Maps':
       
         coordinates = {
         
-          '中川区 (Nakagawa Ward)': [35.1392027, 136.7778013],
-            '緑区 (Midori Ward)': [35.0852, 136.9708]
+          '中川区(Nakagawa Ward)': [35.1392027, 136.7778013],
+            '緑区(Midori Ward)': [35.0852, 136.9708]
         }
 
         m = folium.Map(location=coordinates[ward_type], zoom_start=10)
