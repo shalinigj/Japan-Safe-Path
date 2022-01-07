@@ -182,7 +182,7 @@ elif add_selectbox == 'Maps':
         for index, row in details.iterrows():
           if row['geometry'].startswith("POINT"):
                geometry = shapely.wkt.loads(row['geometry'])
-            else:
+          else:
                 p = shapely.wkt.loads(row['geometry'])
                 geometry = p.centroid
 
