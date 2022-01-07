@@ -186,11 +186,14 @@ elif add_selectbox == 'Maps':
                 p = shapely.wkt.loads(row['geometry'])
                 geometry = p.centroid
 
-       folium.Marker([geometry.y, geometry.x], popup=row['display_name'],).add_to(m)
+       
+          folium.Marker(
+                [geometry.y, geometry.x], popup=row['display_name'],
+          ).add_to(m)
 
-       london_location = [35.183334,136.899994]
+       #london_location = [35.183334,136.899994]
 
-       m = folium.Map(location=london_location, zoom_start=15)
+       #m = folium.Map(location=london_location, zoom_start=15)
        folium_static(m, width=900)
         
         
