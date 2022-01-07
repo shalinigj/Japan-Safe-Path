@@ -179,7 +179,7 @@ elif add_selectbox == 'Maps':
         }
 
         m = folium.Map(location=coordinates[ward_type], zoom_start=10)
-       for index, row in details.iterrows():
+        for index, row in details.iterrows():
           if row['geometry'].startswith("POINT"):
                geometry = shapely.wkt.loads(row['geometry'])
             else:
