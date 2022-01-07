@@ -194,7 +194,7 @@ elif add_selectbox == 'Maps':
        #london_location = [35.183334,136.899994]
 
        #m = folium.Map(location=london_location, zoom_start=15)
-       folium_static(m, width=900)
+        folium_static(m, width=900)
         
         
 elif add_selectbox == 'Visualizations':
